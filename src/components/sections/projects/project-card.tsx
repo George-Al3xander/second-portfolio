@@ -20,7 +20,7 @@ const ProjectCard = ({
     {
       children: "View preview",
       linkProps: {
-        href: url_preview,
+        href: url_preview || "",
         target: "_blank",
       },
     },
@@ -29,7 +29,7 @@ const ProjectCard = ({
       children: "View code",
       startIcon: <FaCode />,
       linkProps: {
-        href: url_github,
+        href: url_github || "",
         target: "_blank",
       },
     },
@@ -44,7 +44,7 @@ const ProjectCard = ({
 
   return (
     <motion.li style={{ scale, opacity }} ref={cardRef} className="group">
-      <div className="bg-gray-100 flex-col-reverse sm:flex-row  group-even:sm:flex-row-reverse hover:bg-gray-200 transition rounded-lg flex gap-4 shadow-lg justify-between max-w-[42rem] sm:h-[20rem] border border-black/5 bg:border-white/5 dark:bg-white/10 dark:hover:bg-gray-700">
+      <div className="bg-gray-100 flex-col-reverse sm:flex-row  group-even:sm:flex-row-reverse hover:bg-gray-200 transition rounded-lg flex gap-4 shadow-lg justify-between max-w-[42rem] sm:min-h-[20rem] border border-black/5 bg:border-white/5 dark:bg-white/10 dark:hover:bg-gray-700">
         <div className="p-8 basis-[100%] flex flex-col gap-4">
           <h3 className="text-2xl font-semibold">{name}</h3>
           <p className="mt-2 leading-relaxed text-gray-700 dark:text-gray-300">
@@ -53,9 +53,11 @@ const ProjectCard = ({
           <ul className="flex gap-4 mt-auto">
             {btns.map(({ linkProps, ...btn }, index) => (
               <li key={"hero-btn-" + index}>
-                <Link {...linkProps}>
-                  <Button {...btn} />
-                </Link>
+                {linkProps.href && (
+                  <Link {...linkProps}>
+                    <Button {...btn} />
+                  </Link>
+                )}
               </li>
             ))}
           </ul>
