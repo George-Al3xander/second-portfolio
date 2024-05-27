@@ -1,5 +1,5 @@
-import React, { HTMLAttributes, ReactNode, forwardRef } from "react"
-import { VariantProps, cva } from "class-variance-authority"
+import React, {  forwardRef } from "react"
+import {  cva } from "class-variance-authority"
 import { cn } from "@/lib/utils"
 import { ButtonProps } from "@/types/types"
 
@@ -24,7 +24,7 @@ export const buttonVariants = cva(
   }
 )
 
-const Button = forwardRef<HTMLButtonElement, ButtonProps>(
+export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   (
     {
       className,
@@ -55,4 +55,4 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
 )
 
 Button.displayName = "ReusableButton"
-export default Button
+

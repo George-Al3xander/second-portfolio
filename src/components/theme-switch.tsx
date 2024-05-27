@@ -1,6 +1,6 @@
 "use client"
 import React from "react"
-import Button from "./reusable/button"
+import { Button } from "@/reusable"
 import { BsSun, BsMoon } from "react-icons/bs"
 import { useThemeSwitch } from "@/hooks/useThemeSwitch"
 

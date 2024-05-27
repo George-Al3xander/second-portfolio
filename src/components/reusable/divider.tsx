@@ -1,6 +1,6 @@
 import React from "react"
-import FramerWrapper from "./framer-wrapper"
-const Divider = () => {
+import {FramerWrapper} from "./framer-wrapper"
+export const Divider = () => {
   return (
     <FramerWrapper
       component="div"
@@ -16,4 +16,4 @@ const Divider = () => {
   )
 }
 
-export default Divider
+

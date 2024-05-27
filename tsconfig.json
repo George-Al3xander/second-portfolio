@@ -19,6 +19,7 @@
     ],
     "baseUrl": "./",
     "paths": {
+      "@/reusable*": ["src/components/reusable/index.ts"],
       "@/*": ["src/*"],
       "@/lib*": ["lib*"]
     }

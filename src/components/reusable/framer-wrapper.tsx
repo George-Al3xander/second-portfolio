@@ -2,9 +2,8 @@
 
 import React, { ReactNode } from "react"
 import { HTMLMotionProps, motion } from "framer-motion"
-
 import { twMerge } from "tailwind-merge"
-const FramerWrapper = ({
+export const FramerWrapper = ({
   component = "span",
   children,
   className,
@@ -21,4 +20,4 @@ const FramerWrapper = ({
   )
 }
 
-export default FramerWrapper
+

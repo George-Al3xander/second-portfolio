@@ -1,9 +1,8 @@
-import { motion } from "framer-motion"
-import Section from "@/components/reusable/section"
-import SectionHeading from "@/components/reusable/section-heading"
+
 import { getSkills } from "@/lib/actions"
 import React from "react"
 import SkillsList from "./skills-list"
+import { Section, SectionHeading } from "@/reusable"
 
 const SkillsSection = async () => {
   const skills = await getSkills()

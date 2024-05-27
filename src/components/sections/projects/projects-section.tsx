@@ -1,5 +1,5 @@
-import Section from "@/components/reusable/section"
-import SectionHeading from "@/components/reusable/section-heading"
+import {Section,SectionHeading} from "@/reusable"
+
 import { getProjects } from "@/lib/actions"
 import React from "react"
 import ProjectCard from "./project-card"

@@ -2,7 +2,7 @@ import { SiTheodinproject } from "react-icons/si"
 import React from "react"
 import { VscServerProcess } from "react-icons/vsc"
 import { MdOutlineWeb } from "react-icons/md"
-//17.02.2023 - Aug 8, 2023
+
 export const experiencesData = [
   {
     title: "Completed The Odin Project",

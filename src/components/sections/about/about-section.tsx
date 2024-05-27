@@ -1,7 +1,6 @@
 import ComplexString from "@/components/complex-string"
-import FramerWrapper from "@/components/reusable/framer-wrapper"
-import Section from "@/components/reusable/section"
-import SectionHeading from "@/components/reusable/section-heading"
+import { FramerWrapper, Section, SectionHeading } from "@/reusable"
+
 import { TComplexString } from "@/types/types"
 import React from "react"
 

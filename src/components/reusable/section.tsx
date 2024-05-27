@@ -7,7 +7,7 @@ import { useInView } from "react-intersection-observer"
 
 import { SectionProps } from "@/types/types"
 
-const Section = ({
+export const Section = ({
   className,
   viewThreshold: threshold = 0.75,
   sectionType,
@@ -34,4 +34,4 @@ const Section = ({
   )
 }
 
-export default Section
+

@@ -1,23 +1,14 @@
 "use client"
-import { motion, useAnimationControls, AnimatePresence } from "framer-motion"
-import { useEffect } from "react"
+import { motion,  AnimatePresence } from "framer-motion"
 
-const FormError = ({
+
+export const FormError = ({
   isError,
   errMessage,
 }: {
   isError: boolean
   errMessage?: string
-}) => {
-  const controls = useAnimationControls()
-  //   useEffect(() => {
-  //     if (isError) {
-  //       controls.start("animate")
-  //     } else {
-  //       controls.start("initial")
-  //     }
-  //   }, [controls, isError])
-  return (
+}) =>  (
     <AnimatePresence>
       {isError && (
         <motion.span
@@ -45,6 +36,6 @@ const FormError = ({
       )}
     </AnimatePresence>
   )
-}
 
-export default FormError
+
+

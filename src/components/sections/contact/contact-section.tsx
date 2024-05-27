@@ -1,8 +1,8 @@
-import Section from "@/components/reusable/section"
-import SectionHeading from "@/components/reusable/section-heading"
+
 import React from "react"
 import ContactForm from "./contact-form"
-import FramerWrapper from "@/components/reusable/framer-wrapper"
+import { Section, FramerWrapper, SectionHeading } from "@/reusable"
+
 
 const variants = {
   initial: {

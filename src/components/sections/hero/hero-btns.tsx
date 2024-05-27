@@ -1,8 +1,11 @@
 import React from "react"
-import Button from "../../reusable/button"
+
 import { FaArrowRightLong, FaLinkedin, FaGithub } from "react-icons/fa6"
 import { ButtonProps } from "@/types/types"
 import Link, { type LinkProps } from "next/link"
+import { Button } from "@/reusable/"
+
+
 const HeroBtns = ({
   linkedin,
   github,
@@ -21,12 +24,6 @@ const HeroBtns = ({
         href: "#contact",
       },
     },
-    // {
-    //   children: "Download CV",
-    //   size: "md",
-    //   variants: "ghost",
-    //   endIcon: <IoMdDownload />,
-    // },
     {
       variants: "icon",
       children: <FaLinkedin />,

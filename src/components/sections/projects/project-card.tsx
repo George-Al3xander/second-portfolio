@@ -1,5 +1,5 @@
 "use client"
-import Button from "@/components/reusable/button"
+import {Button} from "@/reusable"
 import { ButtonProps, Project } from "@/types/types"
 import { motion, useScroll, useTransform } from "framer-motion"
 import Image from "next/image"

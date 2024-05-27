@@ -1,8 +1,8 @@
 "use client"
-import Button from "@/components/reusable/button"
+import {Button} from "@/reusable"
 import React from "react"
 import { motion } from "framer-motion"
-import { RiArrowGoBackFill } from "react-icons/ri"
+
 export default function Error({
   error,
   reset,

@@ -2,9 +2,9 @@
 
 import { useThemeSwitch } from "@/hooks/useThemeSwitch"
 import React from "react"
-import toast, { Toaster } from "react-hot-toast"
+import { Toaster } from "react-hot-toast"
 
-const Toast = () => {
+export const Toast = () => {
   const { theme } = useThemeSwitch()
   return (
     <Toaster
@@ -25,5 +25,3 @@ const Toast = () => {
     />
   )
 }
-
-export default Toast

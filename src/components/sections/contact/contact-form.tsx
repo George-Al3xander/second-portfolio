@@ -3,15 +3,11 @@ import { useRef, useState } from "react"
 import z from "zod"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
-
 import emailjs from "@emailjs/browser"
 import toast from "react-hot-toast"
-import { motion } from "framer-motion"
-import Button from "@/components/reusable/button"
-
-import FormError from "@/components/reusable/form-error"
 import { MdSend } from "react-icons/md"
 import { clsx } from "clsx"
+import { Button, FormError } from "@/reusable"
 
 const ContactSchema = z.object({
   email: z.string().email(),

@@ -1,10 +1,9 @@
-import Button from "@/components/reusable/button"
-import FramerWrapper from "@/components/reusable/framer-wrapper"
+import { Button, FramerWrapper } from "@/reusable"
 import Link from "next/link"
 import React from "react"
 import { FaHome } from "react-icons/fa"
-const NotFoundPage = () => {
-  return (
+
+const NotFoundPage = () =>(
     <section className="h-[calc(100vh-12rem)] w-[min(90%,40rem)]  mx-auto text-center flex flex-col gap-10">
       <FramerWrapper
         initial={{ opacity: 0, y: -200 }}
@@ -52,6 +51,6 @@ const NotFoundPage = () => {
       </FramerWrapper>
     </section>
   )
-}
+
 
 export default NotFoundPage

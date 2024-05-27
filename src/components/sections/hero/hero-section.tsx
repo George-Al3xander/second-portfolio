@@ -1,14 +1,11 @@
 import React from "react"
-import Section from "../../reusable/section"
-
 import ComplexString from "../../complex-string"
 import { HeroSectionProps } from "@/types/types"
 import HeroBtns from "./hero-btns"
 import HeroIcon from "./hero-icon"
-import FramerWrapper from "../../reusable/framer-wrapper"
-import { FaDownLong } from "react-icons/fa6"
-import { BiSolidMouse } from "react-icons/bi"
-const Icon = BiSolidMouse
+import { FramerWrapper, Section } from "@/reusable"
+
+
 const HeroSection = ({ title, ...props }: HeroSectionProps) => {
   return (
     <Section

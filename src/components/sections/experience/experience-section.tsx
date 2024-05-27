@@ -1,8 +1,6 @@
 "use client"
-import Section from "@/components/reusable/section"
-import SectionHeading from "@/components/reusable/section-heading"
-import React, { useEffect, useState } from "react"
 
+import React, { useEffect, useState } from "react"
 import {
   VerticalTimeline,
   VerticalTimelineElement,
@@ -11,6 +9,7 @@ import "react-vertical-timeline-component/style.min.css"
 import { experiencesData } from "./experience-data"
 import { useActiveSection } from "@/hooks/useActiveSectionContext"
 import { useThemeSwitch } from "@/hooks/useThemeSwitch"
+import { Section, SectionHeading } from "@/reusable"
 
 const ExperienceSection = () => {
   const { activeSection } = useActiveSection()

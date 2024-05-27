@@ -1,7 +1,7 @@
 import { TComponent } from "@/types/types"
 import React, { ReactNode } from "react"
 
-const WrapperComp = ({
+export const WrapperComp = ({
   component: Tag,
   children,
 }: {
@@ -12,4 +12,4 @@ const WrapperComp = ({
   return <Tag>{children}</Tag>
 }
 
-export default WrapperComp
+
