@@ -22,7 +22,7 @@ describe("Behavior", () => {
   it("should properly render a complex string", () => {
     const complexString: TComplexString[] = [
       "Hello, ",
-      { text: "I am", className: "font-bold" },
+      { text: "I am ", className: "font-bold" },
       "a complex",
       { text: "string", className: "italic" },
     ]
@@ -33,7 +33,7 @@ describe("Behavior", () => {
         expect(elem?.textContent).toContain(part)
       } else {
         const { text, className } = part
-        const elem = screen.queryByText(text)
+        const elem = screen.queryByText(text.trim())
         expect(elem).toBeInTheDocument()
         expect(elem?.className).toContain(className)
       }

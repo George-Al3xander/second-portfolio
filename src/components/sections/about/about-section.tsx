@@ -1,4 +1,4 @@
-import ComplexString from "@/components/complex-string"
+import ComplexString from "@/components/complex string/complex-string"
 import { FramerWrapper, Section, SectionHeading } from "@/reusable"
 
 import { TComplexString } from "@/types/types"

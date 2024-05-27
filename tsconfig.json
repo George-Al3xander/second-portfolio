@@ -17,11 +17,11 @@
         "name": "next"
       }
     ],
-    //"baseUrl": "./",
+    "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"],
-      "@/reusable*": ["./src/components/reusable/index.ts"],
-      "@/lib/*": ["./lib/*"]
+      "@/reusable*": ["src/components/reusable/index.ts"],
+      "@/*": ["src/*"],
+      "@/lib/*": ["lib/*"]
     }
   },
   "include": [

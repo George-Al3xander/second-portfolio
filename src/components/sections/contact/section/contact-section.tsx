@@ -1,6 +1,6 @@
 
 import React from "react"
-import ContactForm from "./contact-form"
+import ContactForm from "../form/contact-form"
 import { Section, FramerWrapper, SectionHeading } from "@/reusable"
 
 

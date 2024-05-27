@@ -1,7 +1,6 @@
 import { render, screen } from "@testing-library/react"
 import { SectionHeading } from "../section-heading"
 import { FramerWrapper } from "../framer-wrapper"
-import { ReactElement, ReactNode } from "react"
 
 const comps: { name: string; Component: any }[] = [
   { name: "section heading", Component: SectionHeading },

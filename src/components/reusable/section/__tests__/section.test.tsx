@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react"
-import { Section } from "../section"
+import { Section } from "@/reusable"
 import "intersection-observer"
 
 describe("Render", () => {
