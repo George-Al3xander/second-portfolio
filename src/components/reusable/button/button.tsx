@@ -1,6 +1,8 @@
-import React, {  forwardRef } from "react"
-import {  cva } from "class-variance-authority"
-import { cn } from "@/lib/utils"
+import React, { forwardRef } from "react"
+import { cva } from "class-variance-authority"
+//import { cn } from "@/lib/utils"
+//../../../lib/utils
+import { cn } from "../../../../lib/utils"
 import { ButtonProps } from "@/types/types"
 
 export const buttonVariants = cva(
@@ -55,4 +57,3 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
 )
 
 Button.displayName = "ReusableButton"
-

@@ -26,6 +26,7 @@ export const Section = ({
 
   return (
     <section
+      data-testid={sectionType}
       id={sectionType}
       ref={sectionRef}
       className={twMerge("scroll-mt-28", className)}
@@ -33,5 +34,3 @@ export const Section = ({
     />
   )
 }
-
-

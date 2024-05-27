@@ -13,10 +13,10 @@ export const getProjects = async () => {
   const snapshots = await getDocs(
     query(
       projectsCollectionRef,
-      /*orderBy("timestamp","desc"),*/ where("isHidden", "==", false)
+      where("isHidden", "==", false)
     )
   )
-  // const snapshots  = await getDocs(projectsCollectionRef)
+  
   const res = snapshots.docs.map((doc) => ({
     ...doc.data(),
     id: doc.id,

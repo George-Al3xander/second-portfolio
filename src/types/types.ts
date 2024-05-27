@@ -1,4 +1,4 @@
-import { buttonVariants } from "@/components/reusable/button"
+import { buttonVariants } from "@/components/reusable/button/button"
 import { links } from "@/hooks/useActiveSectionContext"
 import { VariantProps } from "class-variance-authority"
 import {
