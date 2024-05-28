@@ -2,7 +2,7 @@ import {Section,SectionHeading} from "@/reusable"
 
 import { getProjects } from "@/lib/actions"
 import React from "react"
-import ProjectCard from "./project-card"
+import ProjectCard from "./card/project-card"
 
 const ProjectsSection = async () => {
   const projects = await getProjects()

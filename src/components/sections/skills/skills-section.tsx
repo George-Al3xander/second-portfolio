@@ -1,7 +1,7 @@
 
 import { getSkills } from "@/lib/actions"
 import React from "react"
-import SkillsList from "./skills-list"
+import SkillsList from "./list/skills-list"
 import { Section, SectionHeading } from "@/reusable"
 
 const SkillsSection = async () => {

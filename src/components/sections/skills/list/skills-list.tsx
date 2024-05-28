@@ -26,7 +26,7 @@ const SkillsList = ({ skills }: { skills: Skill[] }) => {
       whileInView="show"
       className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 gap-2 text-xl font-semibold"
     >
-      {skills.map(({ name, icon }) => (
+      {skills.map(({ name, icon }, index) => (
         <motion.li
           whileHover={{
             y: -10,
@@ -42,6 +42,7 @@ const SkillsList = ({ skills }: { skills: Skill[] }) => {
         >
           {name}{" "}
           <span
+            data-testid={`icon-${index}`}
             className="w-10 h-10"
             dangerouslySetInnerHTML={{ __html: icon }}
           />

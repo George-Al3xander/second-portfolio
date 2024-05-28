@@ -1,7 +1,7 @@
 import React from "react"
 import ComplexString from "../../complex string/complex-string"
 import { HeroSectionProps } from "@/types/types"
-import HeroBtns from "./hero-btns"
+import HeroBtns from "./buttons/hero-btns"
 import HeroIcon from "./hero-icon"
 import { FramerWrapper, Section } from "@/reusable"
 

@@ -1,4 +1,4 @@
-import { render, screen } from "@testing-library/react"
+import { render, screen, waitFor } from "@testing-library/react"
 import ContactForm from "../contact-form"
 import userEvent from "@testing-library/user-event"
 
@@ -9,14 +9,21 @@ const errMessagesMin: { [K in (typeof inputFields)[number]]: string } = {
   message: "Message must be at least 50 characters in length",
 }
 
+const inputMaxLength: { [K in (typeof inputFields)[number]]: number } = {
+  email: 255,
+  name: 100,
+  message: 300,
+}
+
 const errMessagesMax: { [K in (typeof inputFields)[number]]: string } = {
   email: "Invalid email",
   name: "Name can't be longer than 100 characters",
   message: "Message can't be longer than 300 characters",
 }
-
-const bigString = `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat.
-`
+const lorem52Char =
+  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur turpis nec nunc rutrum, eget faucibus erat aliquam. Nunc efficitur tempus neque, ac vehicula neque pellentesque in. Nam efficitur scelerisque ligula, ut vestibulum risus varius id. Fusce vulputate lacus gravida fringilla consectetur. Fusce quis odio at leo tincidunt dictum ultricies id neque. Vivamus gravida consectetur."
+const string2Char = "be"
+const newText = "New Text"
 
 describe("Render", () => {
   it("should render the form", () => {
@@ -45,7 +52,6 @@ describe("Behavior", () => {
   })
   describe("Input value change", () => {
     inputFields.forEach((field) => {
-      const newText = "New Text"
       it(`should change value of the '${field}' input`, async () => {
         render(<ContactForm />)
         const input = await screen.findByPlaceholderText(field.toUpperCase())
@@ -57,15 +63,45 @@ describe("Behavior", () => {
   describe("Error messages", () => {
     describe("Min", () => {
       inputFields.forEach((field) => {
-        const newText = "Ne"
         it(`should render error message for min required characters in the '${field}' input`, async () => {
           render(<ContactForm />)
           const input = await screen.findByPlaceholderText(field.toUpperCase())
-          await userEvent.type(input, newText)
+          await userEvent.type(input, string2Char)
           const btn = await screen.findByRole("button")
           await userEvent.click(btn)
           const errMsg = await screen.findByText(errMessagesMin[field])
           expect(errMsg).toBeInTheDocument()
+        })
+      })
+    })
+    describe("Max", () => {
+      inputFields.forEach((field) => {
+        it(`should render error message for max required characters in the '${field}' input`, async () => {
+          render(<ContactForm />)
+          const input = await screen.findByPlaceholderText(field.toUpperCase())
+          await userEvent.type(input, "A".repeat(inputMaxLength[field] + 5))
+          const btn = await screen.findByRole("button")
+          await userEvent.click(btn)
+          const errMsg = await screen.findByText(errMessagesMax[field])
+          expect(errMsg).toBeInTheDocument()
+        })
+      })
+    })
+    describe("Disappear after the valid input", () => {
+      inputFields.forEach((field) => {
+        it(`should remove error message after the valid '${field}' input`, async () => {
+          render(<ContactForm />)
+          const input = await screen.findByPlaceholderText(field.toUpperCase())
+          await userEvent.type(input, string2Char)
+          const btn = await screen.findByRole("button")
+          await userEvent.click(btn)
+          const errMsg = await screen.findByText(errMessagesMin[field])
+          if (field == "email") {
+            await userEvent.type(input, "best@gmail.com")
+          } else {
+            await userEvent.type(input, lorem52Char)
+          }
+          await waitFor(() => expect(errMsg).not.toBeInTheDocument())
         })
       })
     })

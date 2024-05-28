@@ -5,7 +5,6 @@ import { ButtonProps } from "@/types/types"
 import Link, { type LinkProps } from "next/link"
 import { Button } from "@/reusable/"
 
-
 const HeroBtns = ({
   linkedin,
   github,
@@ -19,14 +18,14 @@ const HeroBtns = ({
     {
       children: "Contact me here",
       size: "md",
-      endIcon: <FaArrowRightLong />,
+      endIcon: <FaArrowRightLong data-testid="contact-hero-link" />,
       linkProps: {
         href: "#contact",
       },
     },
     {
       variants: "icon",
-      children: <FaLinkedin />,
+      children: <FaLinkedin data-testid="linkedin-hero-link" />,
       linkProps: {
         href: linkedin,
         target: "_blank",
@@ -34,7 +33,7 @@ const HeroBtns = ({
     },
     {
       variants: "icon",
-      children: <FaGithub />,
+      children: <FaGithub data-testid="github-hero-link" />,
       linkProps: {
         href: github,
         target: "_blank",
@@ -42,7 +41,10 @@ const HeroBtns = ({
     },
   ]
   return (
-    <ul className="flex justify-center items-center gap-4 flex-col sm:flex-row">
+    <ul
+      
+      className="flex justify-center items-center gap-4 flex-col sm:flex-row"
+    >
       {btns.map(({ linkProps, ...btn }, index) => (
         <li key={"hero-btn-" + index}>
           {linkProps ? (

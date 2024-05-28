@@ -5,7 +5,7 @@ import Header from "@/components/header"
 import { TComplexString } from "@/types/types"
 import ProjectsSection from "@/components/sections/projects/projects-section"
 import ExperienceSection from "@/components/sections/experience/experience-section"
-import ContactSection from "@/components/sections/contact/contact-section"
+import ContactSection from "@/components/sections/contact/section/contact-section"
 import SkillsSection from "@/components/sections/skills/skills-section"
 import { Toast, Section, Divider } from "@/reusable"
 

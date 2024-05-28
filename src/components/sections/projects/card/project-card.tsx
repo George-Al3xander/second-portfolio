@@ -1,5 +1,5 @@
 "use client"
-import {Button} from "@/reusable"
+import { Button } from "@/reusable"
 import { ButtonProps, Project } from "@/types/types"
 import { motion, useScroll, useTransform } from "framer-motion"
 import Image from "next/image"
@@ -51,15 +51,17 @@ const ProjectCard = ({
             {description}
           </p>
           <ul className="flex gap-4 mt-auto">
-            {btns.map(({ linkProps, ...btn }, index) => (
-              <li key={"hero-btn-" + index}>
-                {linkProps.href && (
-                  <Link {...linkProps}>
-                    <Button {...btn} />
-                  </Link>
-                )}
-              </li>
-            ))}
+            {btns.map(({ linkProps, ...btn }, index) => {
+              if (linkProps.href) {
+                return (
+                  <li key={"hero-btn-" + index}>
+                    <Link {...linkProps}>
+                      <Button {...btn} />
+                    </Link>
+                  </li>
+                )
+              }
+            })}
           </ul>
         </div>
         <div className="overflow-hidden  relative basis-[100%] ">
