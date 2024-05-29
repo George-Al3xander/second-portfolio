@@ -2,7 +2,7 @@
 
 import React, { useEffect } from "react"
 import { twMerge } from "tailwind-merge"
-import { useActiveSection } from "@/hooks/useActiveSectionContext"
+import { useActiveSection } from "@/hooks/useActiveSectionContext/useActiveSectionContext"
 import { useInView } from "react-intersection-observer"
 
 import { SectionProps } from "@/types/types"

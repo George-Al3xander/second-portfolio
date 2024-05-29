@@ -3,7 +3,10 @@ import React, { useActionState, useState } from "react"
 import { motion } from "framer-motion"
 import Link from "next/link"
 import clsx from "clsx"
-import { links, useActiveSection } from "@/hooks/useActiveSectionContext"
+import {
+  links,
+  useActiveSection,
+} from "@/hooks/useActiveSectionContext/useActiveSectionContext"
 
 const variants = {
   initial: { opacity: 0, y: -100 },

@@ -1,10 +1,10 @@
 import type { Metadata } from "next"
 import { Inter } from "next/font/google"
 import "./globals.css"
-import { ActiveSectionProvider } from "@/hooks/useActiveSectionContext"
+import { ActiveSectionProvider } from "@/hooks/useActiveSectionContext/useActiveSectionContext"
 import Footer from "@/components/footer"
-import ThemeSwitch from "@/components/theme-switch"
-import { ThemeSwitchContextProvider } from "@/hooks/useThemeSwitch"
+import ThemeSwitch from "@/components/theme switch/theme-switch"
+import { ThemeSwitchContextProvider } from "@/hooks/useThemeSwitch/useThemeSwitch"
 
 const inter = Inter({ subsets: ["latin"] })
 

@@ -3,7 +3,7 @@
 import { MdSend } from "react-icons/md"
 import { clsx } from "clsx"
 import { Button, FormError } from "@/reusable"
-import { useSendEmail } from "@/hooks/useSendEmail"
+import { useSendEmail } from "@/hooks/useSendEmail/useSendEmail"
 
 const fields: { name: string; type?: string }[] = [
   { name: "name" },

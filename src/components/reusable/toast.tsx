@@ -1,6 +1,6 @@
 "use client"
 
-import { useThemeSwitch } from "@/hooks/useThemeSwitch"
+import { useThemeSwitch } from "@/hooks/useThemeSwitch/useThemeSwitch"
 import React from "react"
 import { Toaster } from "react-hot-toast"
 

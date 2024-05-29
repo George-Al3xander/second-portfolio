@@ -7,8 +7,8 @@ import {
 } from "react-vertical-timeline-component"
 import "react-vertical-timeline-component/style.min.css"
 import { experiencesData } from "./experience-data"
-import { useActiveSection } from "@/hooks/useActiveSectionContext"
-import { useThemeSwitch } from "@/hooks/useThemeSwitch"
+import { useActiveSection } from "@/hooks/useActiveSectionContext/useActiveSectionContext"
+import { useThemeSwitch } from "@/hooks/useThemeSwitch/useThemeSwitch"
 import { Section, SectionHeading } from "@/reusable"
 
 const ExperienceSection = () => {

@@ -1,5 +1,5 @@
 import { buttonVariants } from "@/components/reusable/button/button"
-import { links } from "@/hooks/useActiveSectionContext"
+import { links } from "@/hooks/useActiveSectionContext/useActiveSectionContext"
 import { VariantProps } from "class-variance-authority"
 import {
   ComponentPropsWithoutRef,

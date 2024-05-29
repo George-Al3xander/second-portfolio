@@ -2,7 +2,7 @@
 import React from "react"
 import { Button } from "@/reusable"
 import { BsSun, BsMoon } from "react-icons/bs"
-import { useThemeSwitch } from "@/hooks/useThemeSwitch"
+import { useThemeSwitch } from "@/hooks/useThemeSwitch/useThemeSwitch"
 
 const ThemeSwitch = () => {
   const { theme, toggleTheme } = useThemeSwitch()
@@ -12,7 +12,11 @@ const ThemeSwitch = () => {
       variants="icon"
       onClick={toggleTheme}
     >
-      {theme == "light" ? <BsSun size={18} /> : <BsMoon size={18} />}
+      {theme == "light" ? (
+        <BsSun data-testid="switch-sun-icon" size={18} />
+      ) : (
+        <BsMoon data-testid="switch-moon-icon" size={18} />
+      )}
     </Button>
   )
 }

@@ -1,5 +1,5 @@
 import { Skill } from "@/types/types"
-import { findAllByText, render, screen } from "@testing-library/react"
+import { render, screen } from "@testing-library/react"
 import SkillsList from "../skills-list"
 import "intersection-observer"
 
