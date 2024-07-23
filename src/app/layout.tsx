@@ -1,25 +1,26 @@
-import type { Metadata } from "next"
-import { Inter } from "next/font/google"
-import "./globals.css"
-import { ActiveSectionProvider } from "@/hooks/useActiveSectionContext/useActiveSectionContext"
-import Footer from "@/components/footer"
-import ThemeSwitch from "@/components/theme switch/theme-switch"
-import { ThemeSwitchContextProvider } from "@/hooks/useThemeSwitch/useThemeSwitch"
+import type { Metadata } from "next";
+import { Inter } from "next/font/google";
+import "./globals.css";
+import { ActiveSectionProvider } from "@/hooks/useActiveSectionContext/useActiveSectionContext";
+import Footer from "@/components/footer";
+import ThemeSwitch from "@/components/theme switch/theme-switch";
+import { ThemeSwitchContextProvider } from "@/hooks/useThemeSwitch/useThemeSwitch";
 
-const inter = Inter({ subsets: ["latin"] })
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "George V. | Personal Portfolio",
-  description: "George is trainee front-end developer ",
+  title: "George Valuiskyi. | Portfolio",
+  description:
+    "I'm George, a trainee front-end/full-stack developer. I enjoy building sites & apps, and my focus is on React (Next.js).",
   icons: {
     icon: "./another-icon.svg",
   },
-}
+};
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode
+  children: React.ReactNode;
 }>) {
   return (
     <html lang="en" className="!scroll-smooth">
@@ -33,5 +34,5 @@ export default function RootLayout({
         </ThemeSwitchContextProvider>
       </body>
     </html>
-  )
+  );
 }

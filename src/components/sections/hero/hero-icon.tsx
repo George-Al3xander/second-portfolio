@@ -6,7 +6,6 @@ import React from "react"
 const HeroIcon = () => {
   return (
     <motion.span
-      aria-label="Laptop icon"
       className="inline-block"
       initial={{ opacity: 0, scale: 0 }}
       animate={{ opacity: 1, scale: 1 }}
@@ -16,6 +15,7 @@ const HeroIcon = () => {
       }}
       whileHover={{ rotate: "10deg" }}
     >
+        <span className="sr-only">Laptop icon</span>
       <MdOutlineComputer size={85} />
     </motion.span>
   )
