@@ -9,12 +9,9 @@ import { ThemeSwitchContextProvider } from "@/hooks/useThemeSwitch/useThemeSwitc
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "George Valuiskyi. | Portfolio",
+  title: "George Valuiskyi | Portfolio",
   description:
     "I'm George, a trainee front-end/full-stack developer. I enjoy building sites & apps, and my focus is on React (Next.js).",
-  icons: {
-    icon: "./another-icon.svg",
-  },
 };
 
 export default function RootLayout({
