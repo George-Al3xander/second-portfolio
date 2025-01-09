@@ -10,7 +10,7 @@
     "test": "jest",
     "format": "npx prettier --write",
     "prepare": "husky",
-    "format:staged": "lint-staged"
+    "format:staged": "tsc --noEmit && pnpm lint && pnpm format ."
   },
   "dependencies": {
     "@emailjs/browser": "^4.3.3",
@@ -20,7 +20,6 @@
     "clsx": "^2.1.1",
     "firebase": "^10.11.1",
     "framer-motion": "^11.1.7",
-    "lint-staged": "^15.3.0",
     "next": "14.2.3",
     "react": "^18",
     "react-dom": "^18",
