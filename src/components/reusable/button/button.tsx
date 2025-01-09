@@ -1,9 +1,7 @@
-import React, { forwardRef } from "react"
-import { cva } from "class-variance-authority"
-//import { cn } from "@/lib/utils"
-//../../../lib/utils
-import { cn } from "../../../../lib/utils"
-import { ButtonProps } from "@/types/types"
+import React, { forwardRef } from "react";
+import { cva } from "class-variance-authority";
+import { cn } from "@/lib/utils";
+import { ButtonProps } from "@/types/types";
 
 export const buttonVariants = cva(
   "font-semibold shadow-lg text-white rounded-full flex justify-center items-center gap-2 outline-none focus:scale-110 hover:opacity-60 hover:-translate-y-1 active:scale-105 transition-all group/button disabled:opacity-60 disabled:cursor-not-allowed",
@@ -23,8 +21,8 @@ export const buttonVariants = cva(
       variants: "default",
       size: "sm",
     },
-  }
-)
+  },
+);
 
 export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   (
@@ -38,7 +36,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       endIcon,
       ...props
     },
-    ref
+    ref,
   ) => (
     <button
       ref={ref}
@@ -53,7 +51,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         {endIcon && variants != "icon" && endIcon}
       </span>
     </button>
-  )
-)
+  ),
+);
 
-Button.displayName = "ReusableButton"
+Button.displayName = "ReusableButton";
