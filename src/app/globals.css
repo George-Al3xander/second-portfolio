@@ -3,20 +3,20 @@
 @tailwind utilities;
 
 html {
-  --line-color: #e5e7eb;
-  --input-bg: white;
-  --autofill-text: black;
+    --line-color: #e5e7eb;
+    --input-bg: white;
+    --autofill-text: black;
 }
 
 html.dark {
-  --line-color: rgba(255, 255, 255, 0.5);
-  --input-bg: black;
-  --autofill-text: white;
+    --line-color: rgba(255, 255, 255, 0.5);
+    --input-bg: black;
+    --autofill-text: white;
 }
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
 input:-webkit-autofill:active {
-  -webkit-box-shadow: 0 0 0 30px var(--input-bg) inset !important;
-  -webkit-text-fill-color: var(--autofill-text);
+    -webkit-box-shadow: 0 0 0 30px var(--input-bg) inset !important;
+    -webkit-text-fill-color: var(--autofill-text);
 }

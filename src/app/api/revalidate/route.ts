@@ -1,17 +1,17 @@
-import { NextRequest, NextResponse } from "next/server"
-import { revalidatePath } from "next/cache"
+import { revalidatePath } from "next/cache";
+import { NextRequest, NextResponse } from "next/server";
 export const GET = async (req: NextRequest) => {
-  const secret = req.nextUrl.searchParams.get("secret")
+    const secret = req.nextUrl.searchParams.get("secret");
 
-  if (secret !== process.env.SECRET_TOKEN) {
-    return NextResponse.json(
-      { message: "Invalid token" },
-      { status: 401, statusText: "unauthorized" }
-    )
-  }
+    if (secret !== process.env.SECRET_TOKEN) {
+        return NextResponse.json(
+            { message: "Invalid token" },
+            { status: 401, statusText: "unauthorized" },
+        );
+    }
 
-  const path = req.nextUrl.searchParams.get("path") || "/"
-  revalidatePath(path)
+    const path = req.nextUrl.searchParams.get("path") || "/";
+    revalidatePath(path);
 
-  return NextResponse.json({ message: "Revalidated" })
-}
+    return NextResponse.json({ message: "Revalidated" });
+};

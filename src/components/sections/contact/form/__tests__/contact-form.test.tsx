@@ -1,4 +1,4 @@
-import { act, render, screen } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import ContactForm from "../contact-form";
 
@@ -20,8 +20,6 @@ const errMessagesMax: { [K in (typeof inputFields)[number]]: string } = {
     name: "Name can't be longer than 100 characters",
     message: "Message can't be longer than 300 characters",
 };
-const lorem52Char =
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean efficitur turpis nec nunc rutrum, eget faucibus erat aliquam. Nunc efficitur tempus neque, ac vehicula neque pellentesque in. Nam efficitur scelerisque ligula, ut vestibulum risus varius id. Fusce vulputate lacus gravida fringilla consectetur. Fusce quis odio at leo tincidunt dictum ultricies id neque. Vivamus gravida consectetur.";
 const string2Char = "be";
 const newText = "New Text";
 
@@ -59,9 +57,7 @@ describe("Behavior", () => {
                 const input = await screen.findByPlaceholderText(
                     field.toUpperCase(),
                 );
-                await act(async () => {
-                    await userEvent.type(input, newText);
-                });
+                await userEvent.type(input, newText);
                 expect(input).toHaveValue(newText);
             });
         });
@@ -74,13 +70,11 @@ describe("Behavior", () => {
                     const input = await screen.findByPlaceholderText(
                         field.toUpperCase(),
                     );
-                    await act(async () => {
-                        await userEvent.type(input, string2Char);
-                    });
+
+                    await userEvent.type(input, string2Char);
+
                     const btn = await screen.findByRole("button");
-                    await act(async () => {
-                        await userEvent.click(btn);
-                    });
+                    await userEvent.click(btn);
                     const errMsg = await screen.findByText(
                         errMessagesMin[field],
                     );
@@ -95,16 +89,12 @@ describe("Behavior", () => {
                     const input = await screen.findByPlaceholderText(
                         field.toUpperCase(),
                     );
-                    await act(async () => {
-                        await userEvent.type(
-                            input,
-                            "A".repeat(inputMaxLength[field] + 5),
-                        );
-                    });
+                    await userEvent.type(
+                        input,
+                        "A".repeat(inputMaxLength[field] + 5),
+                    );
                     const btn = await screen.findByRole("button");
-                    await act(async () => {
-                        await userEvent.click(btn);
-                    });
+                    await userEvent.click(btn);
                     const errMsg = await screen.findByText(
                         errMessagesMax[field],
                     );
